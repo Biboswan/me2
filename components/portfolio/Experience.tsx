@@ -1,0 +1,34 @@
+import * as React from "react"
+
+import { content as C } from "./content"
+import Reveal from "./Reveal"
+
+const Experience: React.FC = () => (
+  <section id="experience">
+    <div className="wrap">
+      <Reveal className="section-head">
+        <span className="section-num">/03 — Experience</span>
+        <h2>
+          Where
+          <br />
+          <i style={{ color: "var(--fg-muted)" }}>I have built</i>
+        </h2>
+      </Reveal>
+      <Reveal className="exp-list">
+        {C.experience.map((e) => (
+          <div
+            key={`${e.company}-${e.period}`}
+            className="exp-row"
+            data-cursor="hover"
+          >
+            <div className="company">{e.company}</div>
+            <div className="role">{e.role}</div>
+            <div className="period">{e.period}</div>
+          </div>
+        ))}
+      </Reveal>
+    </div>
+  </section>
+)
+
+export default Experience

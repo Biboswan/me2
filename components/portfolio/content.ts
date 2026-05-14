@@ -1,0 +1,335 @@
+export interface Project {
+  num: string
+  title: string
+  client: string
+  year: string
+  tags: string[]
+  blurb: string
+  action: string
+  href: string
+  image?: string
+  role?: string
+  summary?: string[]
+}
+
+export interface ExperienceItem {
+  company: string
+  role: string
+  period: string
+}
+
+export interface ListItem {
+  date: string
+  title: string
+  venue: string
+  kind?: string
+  read?: string
+}
+
+export interface Testimonial {
+  body: string
+  name: string
+  role: string
+}
+
+export interface Social {
+  label: string
+  value: string
+  href: string
+}
+
+export const content = {
+  name: ["Biboswan", "Roy"] as const,
+  shortName: "Biboswan",
+  monogram: "BR",
+  tagline: "Senior Software Engineer & digital nomad",
+  intro:
+    "Frontend & fullstack-ish engineer building enterprise security UI. Open-source contributor, public speaker, occasional dancer.",
+  location: "Currently · India (this month)",
+  countriesLast: 6,
+  yearsExp: 7,
+
+  roles: [
+    "Senior Software Engineer.",
+    "Frontend Architect.",
+    "Open-source contributor.",
+    "Digital nomad.",
+    "Mozillian.",
+  ],
+
+  marquee: [
+    "React",
+    "Typescript",
+    "GraphQL",
+    "Next.js",
+    "Open Source",
+    "Web3",
+    "Distributed Teams",
+    "6 Countries / Year",
+    "Mozillian",
+    "Google Udacity Scholar",
+  ],
+
+  about: {
+    paragraphs: [
+      "Hi, I'm **Biboswan**.",
+      "I build **frontend architectures** for enterprise security products — **React, GraphQL, TypeScript**.",
+      "Currently exploring **web3**. Previously a **Google Udacity Scholar** and a **Mozillian**.",
+      "Working from **6 countries** last year. Powered by ice lattes.",
+    ],
+    facts: {
+      based: ["India · always moving"],
+      stack: [
+        "React · TS · GraphQL",
+        "Next.js · Node · Go",
+        "Recoil · Apollo · Playwright",
+      ],
+      open: ["Mozillian", "Google Udacity Scholar 2k18", "Techstars NYC R1"],
+      mode: ["Remote-first since day one", "Async across time zones"],
+    },
+  },
+
+  projects: [
+    {
+      num: "01",
+      title: "Experts Connect",
+      client: "IIT Alumni Centre Bangalore",
+      year: "2024",
+      tags: ["React", "Next.js", "Supabase", "LLMs"],
+      blurb:
+        "AI-powered matchmaking between industry R&D problems and IIT researchers. Design and build, end to end.",
+      action: "Read",
+      href: "#",
+      image: "/expertsconnect.png",
+      role: "Design & Engineering Lead",
+      summary: [
+        "AI-powered matchmaking between industry R&D problems and IIT researchers. Design and build, end to end.",
+      ],
+    },
+    {
+      num: "02",
+      title: "Tattvam AI",
+      client: "Launch site · Tattvam Labs",
+      year: "2024",
+      tags: ["React", "Next.js", "UI/UX"],
+      blurb:
+        "The first public face of an AI-for-chip-design startup, shipped with their $1.7M funding announcement.",
+      action: "Visit",
+      href: "https://www.tattvamlabs.ai/",
+      role: "Design & Engineering",
+    },
+    {
+      num: "03",
+      title: "Unified Actions Platform",
+      client: "SentinelOne",
+      year: "2024",
+      tags: ["React", "TypeScript", "API Design"],
+      blurb:
+        "One dropdown to act on 100k+ assets across endpoints, cloud, and identity — bridging React with legacy Angular modals.",
+      action: "Read",
+      href: "#",
+      role: "Independent Architect",
+    },
+    {
+      num: "04",
+      title: "Cloud Scanner Policies",
+      client: "SentinelOne",
+      year: "2023",
+      tags: ["GraphQL", "Recoil", "Forms"],
+      blurb:
+        "A schema-driven form wizard configuring vulnerability scans for 2B VM images a day across AWS, GCP, Azure, OCI, and Alibaba.",
+      action: "Visit",
+      href: "https://www.sentinelone.com/platform/cloud-security",
+      role: "Frontend Lead",
+    },
+    {
+      num: "05",
+      title: "Unified Tagging Platform",
+      client: "SentinelOne",
+      year: "2023",
+      tags: ["React", "GraphQL", "Playwright"],
+      blurb:
+        "A tagging modal library used across 16+ product lines, with multi-tenant permissions and i18n.",
+      action: "Read",
+      href: "#",
+      role: "Library Author & Maintainer",
+    },
+    {
+      num: "06",
+      title: "Singularity Shell",
+      client: "SentinelOne",
+      year: "2023",
+      tags: ["React", "TypeScript", "Angular"],
+      blurb:
+        "Unified three product consoles built on different frontend frameworks into one experience.",
+      action: "Read",
+      href: "#",
+      role: "Shell / Iframe Architecture",
+    },
+    {
+      num: "07",
+      title: "A11y Gradient",
+      client: "Chrome Extension",
+      year: "2022",
+      tags: ["Extension", "A11y", "DevTools"],
+      blurb:
+        "Contrast-ratio checking for text on gradients and image backgrounds — the case DevTools doesn't handle.",
+      action: "Install",
+      href: "https://chromewebstore.google.com/detail/a11y-gradient/kokihagjmdkofdmahbcofpnkccigjmnm",
+      role: "Solo · Design & Build",
+    },
+    {
+      num: "08",
+      title: "StudioYou Webstore",
+      client: "StudioYou",
+      year: "2020",
+      tags: ["React", "Styled Components"],
+      blurb: "Built the e-commerce storefront from zero on React.",
+      action: "Read",
+      href: "#",
+      role: "Frontend Intern",
+    },
+    {
+      num: "09",
+      title: "Mozilla",
+      client: "Open source contributor",
+      year: "2018–19",
+      tags: ["Node", "Go", "Python"],
+      blurb:
+        "Authored taskcluster-lib-pulse v2. Shipped inactive CSS in Firefox DevTools' Inspector.",
+      action: "Read",
+      href: "#",
+      role: "Open Source Contributor",
+    },
+  ] as Project[],
+
+  events: [
+    {
+      date: "2024",
+      title: "Open source as a way of life",
+      venue: "Community talk · India",
+      kind: "Talk",
+    },
+    {
+      date: "2023",
+      title: "Frontend at scale in enterprise security",
+      venue: "SentinelOne internal",
+      kind: "Talk",
+    },
+    {
+      date: "2019",
+      title: "Contributing to Mozilla Taskcluster",
+      venue: "Mozilla All-Hands",
+      kind: "Workshop",
+    },
+    {
+      date: "2018",
+      title: "Google Udacity Scholar — Mobile Web track",
+      venue: "Scholarship cohort",
+      kind: "Cohort",
+    },
+  ] as ListItem[],
+
+  writing: [
+    {
+      date: "2024",
+      title: "Schema-driven forms for cloud policy wizards",
+      venue: "Notes from Cloud Scanner",
+      read: "6 min",
+    },
+    {
+      date: "2023",
+      title: "Bridging React and Angular through a shell architecture",
+      venue: "Singularity Shell retro",
+      read: "8 min",
+    },
+    {
+      date: "2022",
+      title: "Designing tag systems that scale across 16 products",
+      venue: "Unified Tagging notes",
+      read: "5 min",
+    },
+    {
+      date: "2020",
+      title: "A11y Gradient — contrast where DevTools won't",
+      venue: "Building the extension",
+      read: "4 min",
+    },
+  ] as ListItem[],
+
+  experience: [
+    {
+      company: "SentinelOne",
+      role: "Senior Software Engineer · Cloud Security · Singularity Platform",
+      period: "Present",
+    },
+    {
+      company: "feats.co",
+      role: "Frontend Engineer · Copenhagen-based startup, professional network from project history",
+      period: "Prior",
+    },
+    { company: "Creatella", role: "Part-time Developer", period: "Earlier" },
+    {
+      company: "StudioYou",
+      role: "Intern — built the webstore from scratch",
+      period: "Earlier",
+    },
+    {
+      company: "Mozilla",
+      role: "Open Source Contributor · Taskcluster / Firefox Profiler / Inspector",
+      period: "Earlier",
+    },
+    {
+      company: "IIM Lucknow",
+      role: "Data Science & Analytics Intern",
+      period: "Earlier",
+    },
+  ] as ExperienceItem[],
+
+  testimonials: [
+    {
+      body: "Successfully completed a remote internship in Data Science & Analytics under my guidance — R programming, basic statistics, Harvard Business School case studies and a capstone project.",
+      name: "Prof. Sameer Mathur",
+      role: "Assoc. Professor, IIM Lucknow · Ph.D. (Carnegie Mellon)",
+    },
+    {
+      body: "broy27 has been contributing to taskcluster and involved in discussions around the upcoming taskcluster-events refactoring.",
+      name: "Jonas Finnemann Jensen",
+      role: "Ex-Mozilla · Software Engineer, Google",
+    },
+    {
+      body: "Biboswan was the formal representative of IMAD to educational institutes. With her contribution, IMAD became the largest MOOC in India with 127,000+ registrations.",
+      name: "Dr. Gaurav Raina",
+      role: "Dept. of Electrical Engineering · IIT Madras",
+    },
+  ] as Testimonial[],
+
+  socials: [
+    {
+      label: "Email",
+      value: "bibo@biboswanroy.com",
+      href: "mailto:bibo@biboswanroy.com",
+    },
+    {
+      label: "Twitter",
+      value: "@Biboswan98",
+      href: "https://twitter.com/Biboswan98",
+    },
+    { label: "GitHub", value: "Biboswan", href: "https://github.com/Biboswan" },
+    {
+      label: "LinkedIn",
+      value: "biboswanroy",
+      href: "https://www.linkedin.com/in/biboswanroy/",
+    },
+    {
+      label: "Medium",
+      value: "@Biboswan98",
+      href: "https://medium.com/@Biboswan98",
+    },
+    {
+      label: "Stack Overflow",
+      value: "biboswan",
+      href: "https://stackoverflow.com/users/7146337/biboswan",
+    },
+  ] as Social[],
+}

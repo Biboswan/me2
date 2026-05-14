@@ -1,5 +1,10 @@
 import type { Viewport } from "next"
-import { Inter } from "next/font/google"
+import {
+  Geist,
+  Instrument_Serif,
+  Inter,
+  JetBrains_Mono,
+} from "next/font/google"
 import localFont from "next/font/local"
 import { ViewTransitions } from "next-view-transitions"
 import type * as React from "react"
@@ -26,6 +31,28 @@ const monoFont = localFont({
   ],
 })
 
+const geist = Geist({
+  variable: "--portfolio-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+})
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--portfolio-display",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--portfolio-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+})
+
 export const viewport: Viewport = {
   themeColor: "#000000",
 }
@@ -39,7 +66,13 @@ const RootLayout: React.FC<Props> = ({ children }) => {
     <ViewTransitions>
       <html
         lang="en"
-        className={classNames(sansFont.variable, monoFont.variable)}
+        className={classNames(
+          sansFont.variable,
+          monoFont.variable,
+          geist.variable,
+          instrumentSerif.variable,
+          jetbrainsMono.variable
+        )}
       >
         <head>{renderSchemaTags()}</head>
 
