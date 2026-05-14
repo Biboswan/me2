@@ -1,0 +1,26 @@
+# Builds the Next.js app with Bun, then runs lint and format checks.
+# https://bun.sh/guides/runtime/cicd
+
+name: Next.js Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+      - run: bun run format:check
+      - run: bun run build
+      # - run: bun test
