@@ -24,7 +24,10 @@ const Work: React.FC = () => (
           const content = (
             <>
               <span className="num">{p.num}</span>
-              <span className="title">{p.title}</span>
+              <span className="title-wrap">
+                <span className="title">{p.title}</span>
+                <span className="blurb">{p.blurb}</span>
+              </span>
               <span className="client">{p.client}</span>
               <span className="tags">
                 {p.tags.map((t) => (

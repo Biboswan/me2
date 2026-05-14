@@ -524,10 +524,22 @@
   color: var(--fg-dim);
   letter-spacing: 0.1em;
 }
+.portfolio .work-row .title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
 .portfolio .work-row .title {
   font-family: var(--font-display);
   font-size: clamp(22px, 2.4vw, 36px);
   line-height: 1.1;
+}
+.portfolio .work-row .blurb {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--fg-muted);
+  max-width: 60ch;
 }
 .portfolio .work-row .client {
   font-family: var(--font-mono);
@@ -667,7 +679,7 @@
 }
 .portfolio .exp-row {
   display: grid;
-  grid-template-columns: 200px 1fr 160px;
+  grid-template-columns: 80px 200px 1fr 160px;
   gap: 32px;
   padding: 22px 0;
   border-top: 1px solid var(--border);
@@ -681,6 +693,24 @@
 }
 .portfolio .exp-row:last-child {
   border-bottom: 1px solid var(--border);
+}
+.portfolio .exp-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 44px;
+}
+.portfolio .exp-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.85);
+  transition: filter 0.25s ease;
+}
+.portfolio .exp-row:hover .exp-logo img {
+  filter: grayscale(0) opacity(1);
 }
 .portfolio .exp-row .company {
   font-family: var(--font-display);

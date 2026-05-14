@@ -20,7 +20,7 @@ const About: React.FC = () => (
         <h2>
           Words
           <br />
-          <i style={{ color: "var(--fg-muted)" }}>about her</i>
+          <i style={{ color: "var(--fg-muted)" }}>about me</i>
         </h2>
       </Reveal>
       <div className="about-grid">

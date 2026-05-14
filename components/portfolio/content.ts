@@ -16,6 +16,8 @@ export interface ExperienceItem {
   company: string
   role: string
   period: string
+  logo?: string
+  logoAlt?: string
 }
 
 export interface ListItem {
@@ -83,8 +85,15 @@ export const content = {
         "React · TS · GraphQL",
         "Next.js · Node · Go",
         "Recoil · Apollo · Playwright",
+        "MongoDB · PostgreSQL · Dgraph",
+        "Kubernetes · Kafka · RabbitMQ",
+        "Playwright",
       ],
-      open: ["Mozillian", "Google Udacity Scholar 2k18", "Techstars NYC R1"],
+      open: [
+        "Mozillian",
+        "Google Udacity Scholar 2k18",
+        "Techstars New York Round1",
+      ],
       mode: ["Remote-first since day one", "Async across time zones"],
     },
   },
@@ -205,55 +214,34 @@ export const content = {
 
   events: [
     {
-      date: "2024",
-      title: "Open source as a way of life",
-      venue: "Community talk · India",
-      kind: "Talk",
+      date: "2025",
+      title: "Token2049",
+      venue: "Dubai · Conference",
+      kind: "Conference",
     },
     {
-      date: "2023",
-      title: "Frontend at scale in enterprise security",
-      venue: "SentinelOne internal",
+      date: "2022",
+      title: "Migrating from Apollo to Urql in a Next.js app",
+      venue: "GeekyAnts Meetup · Bangalore",
       kind: "Talk",
     },
     {
       date: "2019",
-      title: "Contributing to Mozilla Taskcluster",
-      venue: "Mozilla All-Hands",
-      kind: "Workshop",
+      title: "GraphQL Asia 2019",
+      venue: "Bangalore · Full scholarship recipient",
+      kind: "Scholarship",
+    },
+    {
+      date: "2019",
+      title: "Getting $0 mentors via open source",
+      venue: "NSEC · Kolkata",
+      kind: "Talk",
     },
     {
       date: "2018",
-      title: "Google Udacity Scholar — Mobile Web track",
-      venue: "Scholarship cohort",
-      kind: "Cohort",
-    },
-  ] as ListItem[],
-
-  writing: [
-    {
-      date: "2024",
-      title: "Schema-driven forms for cloud policy wizards",
-      venue: "Notes from Cloud Scanner",
-      read: "6 min",
-    },
-    {
-      date: "2023",
-      title: "Bridging React and Angular through a shell architecture",
-      venue: "Singularity Shell retro",
-      read: "8 min",
-    },
-    {
-      date: "2022",
-      title: "Designing tag systems that scale across 16 products",
-      venue: "Unified Tagging notes",
-      read: "5 min",
-    },
-    {
-      date: "2020",
-      title: "A11y Gradient — contrast where DevTools won't",
-      venue: "Building the extension",
-      read: "4 min",
+      title: "Mozilla All-Hands 2018",
+      venue: "Orlando · Invited as top OSS contributor",
+      kind: "Invited",
     },
   ] as ListItem[],
 
@@ -262,28 +250,37 @@ export const content = {
       company: "SentinelOne",
       role: "Senior Software Engineer · Cloud Security · Singularity Platform",
       period: "Present",
+      logo: "/logos/sentinelone_logo.jpeg",
     },
     {
-      company: "feats.co",
-      role: "Frontend Engineer · Copenhagen-based startup, professional network from project history",
+      company: "Feats Aps",
+      role: "Fullstack Engineer · Copenhagen-based startup, professional network from project history",
       period: "Prior",
+      logo: "/logos/featsofficial_logo.jpeg",
     },
-    { company: "Creatella", role: "Part-time Developer", period: "Earlier" },
     {
-      company: "StudioYou",
+      company: "Creatella",
+      role: "Frontend Developer",
+      period: "Earlier",
+      logo: "/logos/creatella.jpeg",
+    },
+    {
+      company: "Kenko AI (formerly StudioYou)",
       role: "Intern — built the webstore from scratch",
       period: "Earlier",
+      logo: "/logos/kenkoai.png",
     },
     {
       company: "Mozilla",
       role: "Open Source Contributor · Taskcluster / Firefox Profiler / Inspector",
       period: "Earlier",
+      logo: "/logos/mozilla.jpeg",
     },
-    {
-      company: "IIM Lucknow",
-      role: "Data Science & Analytics Intern",
-      period: "Earlier",
-    },
+    // {
+    //   company: "IIM Lucknow",
+    //   role: "Data Science & Analytics Intern",
+    //   period: "Earlier",
+    // },
   ] as ExperienceItem[],
 
   testimonials: [

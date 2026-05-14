@@ -21,6 +21,12 @@ const Experience: React.FC = () => (
             className="exp-row"
             data-cursor="hover"
           >
+            <div className="exp-logo" aria-hidden="true">
+              {e.logo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={e.logo} alt={e.logoAlt ?? `${e.company} logo`} />
+              ) : null}
+            </div>
             <div className="company">{e.company}</div>
             <div className="role">{e.role}</div>
             <div className="period">{e.period}</div>
