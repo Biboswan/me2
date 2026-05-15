@@ -18,8 +18,7 @@
   --font-display: var(--portfolio-display), "Times New Roman", serif;
   --font-sans:
     var(--portfolio-sans), "Helvetica Neue", Helvetica, system-ui, sans-serif;
-  --font-mono:
-    var(--portfolio-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-mono: var(--portfolio-mono), ui-monospace, "SFMono-Regular", monospace;
 
   --max-w: 1480px;
   --gutter: clamp(20px, 4vw, 56px);
@@ -198,7 +197,8 @@
   height: 7px;
   border-radius: 999px;
   background: oklch(0.78 0.16 145);
-  box-shadow: 0 0 0 3px color-mix(in oklch, oklch(0.78 0.16 145) 30%, transparent);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklch, oklch(0.78 0.16 145) 30%, transparent);
   animation: portfolio-pulse 2.4s ease-in-out infinite;
 }
 @keyframes portfolio-pulse {
@@ -414,11 +414,7 @@
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 80px 80px;
-  mask-image: radial-gradient(
-    ellipse at 70% 30%,
-    black 0%,
-    transparent 65%
-  );
+  mask-image: radial-gradient(ellipse at 70% 30%, black 0%, transparent 65%);
   opacity: 0.35;
   pointer-events: none;
 }
