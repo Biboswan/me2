@@ -7,9 +7,7 @@ export interface Project {
   blurb: string
   action: string
   href: string
-  image?: string
   role?: string
-  summary?: string[]
 }
 
 export interface ExperienceItem {
@@ -109,11 +107,7 @@ export const content = {
         "AI-powered matchmaking between industry R&D problems and IIT researchers. Design and build, end to end.",
       action: "Read",
       href: "#",
-      image: "/expertsconnect.png",
       role: "Design & Engineering Lead",
-      summary: [
-        "AI-powered matchmaking between industry R&D problems and IIT researchers. Design and build, end to end.",
-      ],
     },
     {
       num: "02",
