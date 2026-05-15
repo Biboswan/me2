@@ -30,11 +30,6 @@ export const getMetadata = ({
       "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     keywords: config.keywords,
 
-    icons: {
-      icon: "/favicon.ico",
-      shortcut: "/icons/icon-512x512.png",
-      apple: "/icons/icon-512x512.png",
-    },
     manifest: `${config.baseUrl}/manifest.json`,
 
     openGraph: {
