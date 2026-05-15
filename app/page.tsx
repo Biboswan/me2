@@ -6,6 +6,7 @@ import Cursor from "@/components/portfolio/Cursor"
 import Events from "@/components/portfolio/Events"
 import Experience from "@/components/portfolio/Experience"
 import Hero from "@/components/portfolio/Hero"
+import HireMe from "@/components/portfolio/HireMe"
 import Nav from "@/components/portfolio/Nav"
 import Quotes from "@/components/portfolio/Quotes"
 import Work from "@/components/portfolio/Work"
@@ -33,6 +34,7 @@ const Home: React.FC = () => (
     <Writing />
     <Quotes />
     <Contact />
+    <HireMe />
     <footer className="footer">
       <span>© Biboswan Roy · 2026</span>
       <span className="br-mark">BR.</span>
