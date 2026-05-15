@@ -1,0 +1,80 @@
+import Image from "next/image"
+
+import FireFoxProfiler from "./FireFoxProfiler.png"
+import InactiveCss from "./inactivecss.png"
+import Tc2018 from "./tc-2k18.png"
+import Tc2019 from "./tc-2k19.png"
+
+My open-source saga at Mozilla, primarily on **Taskcluster** — Mozilla's internal CI and task-execution framework — with side quests into **Firefox DevTools** and the **Firefox Profiler**.
+
+The motivation was simple: code like professionals, ship to real users, and learn from people who have written software at scale.
+
+## Taskcluster
+
+Taskcluster is the platform that runs Mozilla's build, test, and release tasks. It's a constellation of microservices exposing REST APIs, a web UI, and workers — fundamentally, it executes tasks defined as JSON objects placed on a queue.
+
+<figure>
+  <Image
+    src={Tc2018}
+    alt="GitHub contribution graph showing 115 contributions in 2018 to the Taskcluster platform"
+    placeholder="blur"
+    sizes="(min-width: 768px) 720px, 100vw"
+  />
+</figure>
+
+<figure>
+  <Image
+    src={Tc2019}
+    alt="GitHub contribution graph showing 39 contributions in 2019 to the Taskcluster platform"
+    placeholder="blur"
+    sizes="(min-width: 768px) 720px, 100vw"
+  />
+</figure>
+
+I contributed across several components:
+
+- **json-e** — a JSON-parameterization / template engine with operators like `$map`, `$each`, `$let`. Shipped fixes and features across the **Node, Go, and Python** implementations to keep them in lockstep.
+- **taskcluster-hooks** — creates tasks in response to events: cron schedules, webhooks, API calls, and Pulse messages.
+- **taskcluster-notify** — fans out task status to email, IRC, Slack, and Matrix.
+- **taskcluster-lib-pulse** — authored **v2** of the library wrapping Mozilla's RabbitMQ / AMQP message bus.
+- **taskcluster-web** & **taskcluster-worker** — UI and worker-side fixes.
+
+Work spanned API design, testing, and documentation — the unglamorous parts that keep a platform usable.
+
+## Firefox DevTools — Inactive CSS
+
+Shipped to the **Inspector** in Firefox: when a CSS property can't take effect because its prerequisites aren't met (e.g. `width` on an inline element, or a property invalidated by `float`), the Inspector dims the rule and explains *why*.
+
+<figure>
+  <Image
+    src={InactiveCss}
+    alt="Firefox 70 Inspector showing the inactive CSS tooltip on grid-auto-columns: the rule is dimmed because the element isn't a grid container"
+    placeholder="blur"
+    sizes="(min-width: 768px) 525px, 100vw"
+  />
+</figure>
+
+My contribution covered the **inactive `display` on floated elements** case. Years later, Firefox is still the only browser shipping this class of warning.
+
+## Firefox Profiler
+
+A React + Redux app that visualizes performance data from the Gecko Profiler. I worked on improving thread visibility in the timeline — especially the cramped layout on smaller macOS displays.
+
+<figure>
+  <Image
+    src={FireFoxProfiler}
+    alt="Screenshot of the Firefox Profiler UI showing tracks for parent process, compositor, web content, and network alongside a call tree"
+    placeholder="blur"
+    sizes="(min-width: 768px) 720px, 100vw"
+  />
+</figure>
+
+## Mozilla All-Hands 2018 · Orlando
+
+Invited as a top open-source contributor by the Taskcluster team. Spent the week pairing with engineers I'd only ever spoken to over Bugzilla and IRC — the moment open source stopped feeling like a hobby and started feeling like a career.
+
+## What it taught me
+
+- How to read a large, multi-language codebase and ship across it without breaking the contract between services.
+- How to write tests and docs as a first-class part of the work, not an afterthought.
+- How an asynchronous, distributed team actually operates — across time zones, on the public record, with strangers reviewing your code.

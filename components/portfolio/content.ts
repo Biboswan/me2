@@ -201,7 +201,7 @@ export const content = {
       blurb:
         "Authored taskcluster-lib-pulse v2. Shipped inactive CSS in Firefox DevTools' Inspector.",
       action: "Read",
-      href: "#",
+      href: "/work/mozilla/",
       role: "Open Source Contributor",
     },
   ] as Project[],

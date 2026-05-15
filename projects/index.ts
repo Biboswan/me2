@@ -1,5 +1,6 @@
 import type * as React from "react"
 
+import mozillaContent from "./mozilla/content.mdx"
 import ssContent from "./singularity-shell/content.mdx"
 
 export interface ProjectEntry {
@@ -31,6 +32,35 @@ export const projects: Record<string, ProjectEntry> = {
       },
     ],
     Content: ssContent,
+  },
+  mozilla: {
+    title: "Open Source Saga at Mozilla",
+    eyebrow: "Open Source Contributor",
+    description:
+      "Shipping to Taskcluster, Firefox DevTools' Inspector, and the Firefox Profiler — Mozilla's open-source platform, in production.",
+    client: "Mozilla",
+    role: "Open Source Contributor",
+    year: "2018–19",
+    stack: [
+      "React",
+      "Node",
+      "GraphQL",
+      "Go",
+      "Python",
+      "Testing",
+      "Documentation",
+    ],
+    links: [
+      {
+        label: "taskcluster-lib-pulse on GitHub",
+        href: "https://github.com/taskcluster/taskcluster-lib-pulse",
+      },
+      {
+        label: "Inactive CSS in Firefox DevTools",
+        href: "https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#inactive-css",
+      },
+    ],
+    Content: mozillaContent,
   },
 }
 
