@@ -4,6 +4,7 @@ import FireFoxProfiler from "./FireFoxProfiler.png"
 import InactiveCss from "./inactivecss.png"
 import Tc2018 from "./tc-2k18.png"
 import Tc2019 from "./tc-2k19.png"
+import TcFlow from "./tc-flow.gif"
 
 My open-source saga at Mozilla, primarily on **Taskcluster** — Mozilla's internal CI and task-execution framework — with side quests into **Firefox DevTools** and the **Firefox Profiler**.
 
@@ -12,6 +13,28 @@ The motivation was simple: code like professionals, ship to real users, and lear
 ## Taskcluster
 
 Taskcluster is the platform that runs Mozilla's build, test, and release tasks. It's a constellation of microservices exposing REST APIs, a web UI, and workers — fundamentally, it executes tasks defined as JSON objects placed on a queue.
+
+<figure
+  className="work-figure"
+  style={{ maxWidth: 560, marginInline: "auto" }}
+>
+  <Image
+    src={TcFlow}
+    alt="Taskcluster Task Group view: hundreds of build tasks streaming through Completed, Running, Failed, Pending, and Unscheduled states"
+    unoptimized
+    sizes="(min-width: 768px) 560px, 100vw"
+  />
+</figure>
+
+I contributed across several components:
+
+- **json-e** — a JSON-parameterization / template engine with operators like `$map`, `$each`, `$let`. Shipped fixes and features across the **Node, Go, and Python** implementations to keep them in lockstep.
+- **taskcluster-hooks** — creates tasks in response to events: cron schedules, webhooks, API calls, and Pulse messages.
+- **taskcluster-notify** — fans out task status to email, IRC, Slack, and Matrix.
+- **taskcluster-lib-pulse** — authored **v2** of the library wrapping Mozilla's RabbitMQ / AMQP message bus.
+- **taskcluster-web** & **taskcluster-worker** — UI and worker-side fixes.
+
+Work spanned API design, testing, and documentation — the unglamorous parts that keep a platform usable.
 
 <figure className="work-figure">
   <Image
@@ -30,16 +53,6 @@ Taskcluster is the platform that runs Mozilla's build, test, and release tasks. 
     sizes="(min-width: 768px) 720px, 100vw"
   />
 </figure>
-
-I contributed across several components:
-
-- **json-e** — a JSON-parameterization / template engine with operators like `$map`, `$each`, `$let`. Shipped fixes and features across the **Node, Go, and Python** implementations to keep them in lockstep.
-- **taskcluster-hooks** — creates tasks in response to events: cron schedules, webhooks, API calls, and Pulse messages.
-- **taskcluster-notify** — fans out task status to email, IRC, Slack, and Matrix.
-- **taskcluster-lib-pulse** — authored **v2** of the library wrapping Mozilla's RabbitMQ / AMQP message bus.
-- **taskcluster-web** & **taskcluster-worker** — UI and worker-side fixes.
-
-Work spanned API design, testing, and documentation — the unglamorous parts that keep a platform usable.
 
 ## Firefox DevTools — Inactive CSS
 

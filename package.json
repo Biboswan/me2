@@ -11,13 +11,13 @@
     "typescript"
   ],
   "bugs": {
-    "url": "https://github.com/nirnejak/nextjs-typescript-saas/issues"
+    "url": "https://github.com/biboswan/me2/issues"
   },
   "license": "MIT",
-  "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
+  "author": "Biboswan Roy <biboswan98@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nirnejak/nextjs-typescript-saas"
+    "url": "https://github.com/biboswan/me2"
   },
   "type": "module",
   "scripts": {
@@ -71,7 +71,11 @@
     "typescript": "^6.0.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,tsx}": [
+      "oxlint --fix",
+      "oxfmt"
+    ],
+    "!(*.d).ts": [
       "oxlint --fix",
       "oxfmt"
     ],

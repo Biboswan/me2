@@ -1054,7 +1054,7 @@
   max-width: none;
 }
 .portfolio .work-body .work-figure img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   border: 1px solid var(--border);

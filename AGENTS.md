@@ -195,3 +195,4 @@ Always run before completing work:
 - oxlint for linting and oxfmt for formatting (no ESLint/Prettier/Biome)
 - Bun package manager
 - Husky pre-commit hooks with lint-staged
+- make every feature mobile responsive and mobile first
