@@ -135,8 +135,8 @@ export const content = {
       tags: ["React", "TypeScript", "API Design"],
       blurb:
         "One dropdown to act on 100k+ assets across endpoints, cloud, and identity — bridging React with legacy Angular modals.",
-      action: "Read",
-      href: "#",
+      action: "Visit",
+      href: "https://www.sentinelone.com/platform/how-singularity-xdr-works/",
       role: "Independent Architect",
     },
     {
