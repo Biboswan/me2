@@ -1,5 +1,6 @@
 "use client"
 
+import { Link } from "next-view-transitions"
 import * as React from "react"
 
 import { content as C } from "./content"
@@ -32,29 +33,29 @@ const Nav: React.FC = () => {
 
   return (
     <nav className={"nav" + (scrolled ? " is-scrolled" : "")}>
-      <a href="#top" className="brand" data-cursor="hover">
+      <Link href="/" className="brand" data-cursor="hover">
         <span className="brand-mark">{C.monogram}</span>
         <span>{C.shortName.toLowerCase()}.roy</span>
-      </a>
+      </Link>
       <div className="links">
-        <a href="#work" data-cursor="hover">
+        <Link href="/#work" data-cursor="hover">
           Work
-        </a>
-        <a href="#about" data-cursor="hover">
+        </Link>
+        <Link href="/#about" data-cursor="hover">
           About
-        </a>
-        <a href="#experience" data-cursor="hover">
+        </Link>
+        <Link href="/#experience" data-cursor="hover">
           Experience
-        </a>
-        <a href="#events" data-cursor="hover">
+        </Link>
+        <Link href="/#events" data-cursor="hover">
           Events
-        </a>
-        <a href="#writing" data-cursor="hover">
+        </Link>
+        <Link href="/#writing" data-cursor="hover">
           Writing
-        </a>
-        <a href="#contact" data-cursor="hover">
+        </Link>
+        <Link href="/#contact" data-cursor="hover">
           Contact
-        </a>
+        </Link>
       </div>
       <div className="meta">
         <span className="status-dot" />

@@ -5,11 +5,11 @@ import { codeToHtml } from "shiki"
 
 import classNames from "@/utils/classNames"
 
-interface Props {
+interface WrapperProps {
   children: React.ReactNode
 }
 
-const BlogWrapper: React.FC<Props> = ({ children }) => {
+export const BlogWrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
     <main className="mx-auto my-24 w-full max-w-170 px-4 md:px-0">
       <article
@@ -103,6 +103,5 @@ export function useMDXComponents(
   return {
     ...otherComponents,
     ...components,
-    wrapper: BlogWrapper,
   }
 }

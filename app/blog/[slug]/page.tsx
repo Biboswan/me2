@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import type * as React from "react"
 
 import { blogSlugs, blogs } from "@/blogs"
+import { BlogWrapper } from "@/mdx-components"
 import { getMetadata } from "@/utils/metadata"
 
 interface Props {
@@ -30,7 +31,11 @@ const BlogPage: React.FC<Props> = async ({ params }) => {
   const blog = blogs[slug]
   if (!blog) notFound()
   const Content = blog.Content
-  return <Content />
+  return (
+    <BlogWrapper>
+      <Content />
+    </BlogWrapper>
+  )
 }
 
 export default BlogPage

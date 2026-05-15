@@ -1,3 +1,4 @@
+import { Link } from "next-view-transitions"
 import * as React from "react"
 
 import { content as C } from "./content"
@@ -50,7 +51,19 @@ const Work: React.FC = () => (
               </span>
             </>
           )
-          return hasLink ? (
+          if (!hasLink) {
+            return (
+              <div key={p.num} {...commonProps}>
+                {content}
+              </div>
+            )
+          }
+          const isInternal = p.href.startsWith("/")
+          return isInternal ? (
+            <Link key={p.num} href={p.href} {...commonProps}>
+              {content}
+            </Link>
+          ) : (
             <a
               key={p.num}
               href={p.href}
@@ -60,10 +73,6 @@ const Work: React.FC = () => (
             >
               {content}
             </a>
-          ) : (
-            <div key={p.num} {...commonProps}>
-              {content}
-            </div>
           )
         })}
       </Reveal>

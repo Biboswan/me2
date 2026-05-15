@@ -102,7 +102,7 @@ export const content = {
       title: "Experts Connect",
       client: "IIT Alumni Centre Bangalore",
       year: "2024",
-      tags: ["React", "Next.js", "Supabase", "LLMs"],
+      tags: ["Supabase", "LLMs"],
       blurb:
         "AI-powered matchmaking between industry R&D problems and IIT researchers. Design and build, end to end.",
       action: "Read",
@@ -114,7 +114,7 @@ export const content = {
       title: "Tattvam AI",
       client: "Launch site · Tattvam Labs",
       year: "2024",
-      tags: ["React", "Next.js", "UI/UX"],
+      tags: ["UI/UX", "Launch site"],
       blurb:
         "The first public face of an AI-for-chip-design startup, shipped with their $1.7M funding announcement.",
       action: "Visit",
@@ -126,7 +126,7 @@ export const content = {
       title: "Unified Actions Platform",
       client: "SentinelOne",
       year: "2024",
-      tags: ["React", "TypeScript", "API Design"],
+      tags: ["API Design", "Angular interop"],
       blurb:
         "One dropdown to act on 100k+ assets across endpoints, cloud, and identity — bridging React with legacy Angular modals.",
       action: "Visit",
@@ -138,7 +138,7 @@ export const content = {
       title: "Cloud Scanner Policies",
       client: "SentinelOne",
       year: "2023",
-      tags: ["GraphQL", "Recoil", "Forms"],
+      tags: ["Recoil", "GraphQL", "Schema-driven forms"],
       blurb:
         "A schema-driven form wizard configuring vulnerability scans for 2B VM images a day across AWS, GCP, Azure, OCI, and Alibaba.",
       action: "Visit",
@@ -150,7 +150,7 @@ export const content = {
       title: "Unified Tagging Platform",
       client: "SentinelOne",
       year: "2023",
-      tags: ["React", "GraphQL", "Playwright"],
+      tags: ["Library", "GraphQL", "Playwright"],
       blurb:
         "A tagging modal library used across 16+ product lines, with multi-tenant permissions and i18n.",
       action: "Read",
@@ -162,11 +162,11 @@ export const content = {
       title: "Singularity Shell",
       client: "SentinelOne",
       year: "2023",
-      tags: ["React", "TypeScript", "Angular"],
+      tags: ["Microfrontends", "Angular", "Iframes"],
       blurb:
         "Unified three product consoles built on different frontend frameworks into one experience.",
       action: "Read",
-      href: "#",
+      href: "/work/singularity-shell/",
       role: "Shell / Iframe Architecture",
     },
     {
@@ -184,9 +184,9 @@ export const content = {
     {
       num: "08",
       title: "StudioYou Webstore",
-      client: "StudioYou",
+      client: "Kenko AI",
       year: "2020",
-      tags: ["React", "Styled Components"],
+      tags: ["E-commerce", "Styled Components", "Iframes"],
       blurb: "Built the e-commerce storefront from zero on React.",
       action: "Read",
       href: "#",

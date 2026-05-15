@@ -1,0 +1,49 @@
+import Architecture from "./Architecture"
+
+The Singularity Shell unified multiple SentinelOne applications — the MGMT console, Attivo, and Skylight, each built on different frontend frameworks — into a single, cohesive console experience.
+
+This work contributed to the **Singularity Operations Center**, a unified security console that centralizes alerts, asset inventory, and a correlation engine to accelerate detection, triage, and investigation.
+
+<Architecture />
+
+## Unified user experience
+
+- Consistent look and feel across applications while preserving each one's individual functionality.
+- Shared design system that worked across multiple frontend frameworks.
+- Coordinated styling, theming, and UI components across all integrated apps.
+
+## Seamless navigation
+
+- Routing system that enabled smooth transitions between apps.
+- Deep-linking and state preserved across apps — no more switching browser tabs.
+- A single navigation surface unifying three previously separate consoles.
+
+## Authentication flow
+
+- Login mechanism that handled automatic redirection after authentication.
+- Secure token management and session handling across apps.
+- Smooth UX while maintaining security boundaries between integrated apps.
+
+## Inter-app communication
+
+- Communication layer between the shell and the iframed applications.
+- Route synchronization and shared state across apps.
+- A secure `postMessage`-based bridge for cross-application calls.
+
+## Console Dialogs architecture
+
+- Transparent-background iframe for dialogs (concept by **Eduard Stankovic**).
+- `postMessage`-based dialog manager for show/hide and lifecycle.
+- Dual-console architecture: one iframe for dialogs, one for regular pages.
+- The initial login form lives inside the dialog iframe.
+
+## Login flow
+
+- The dialog iframe handles initial authentication.
+- After login, the shell auto-redirects to the appropriate inner app.
+- Apps are initiated by login and by redirect links.
+- Redirects behave as if the user clicked the link manually — no auth round-trip.
+
+## Impact
+
+The Shell unified three apps into one console with **minimal code changes** in each integrated app — preserving their individual strengths while delivering a single, coherent experience to security operators.

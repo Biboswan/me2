@@ -937,4 +937,274 @@
   .portfolio-cursor {
     display: none;
   }
+  .portfolio .work-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio .work-detail-head {
+    padding-top: 100px;
+  }
+}
+
+/* ---------- Project detail page ---------- */
+.portfolio .work-detail {
+  padding-bottom: 120px;
+}
+.portfolio .work-back {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 8px 0;
+  margin-top: 120px;
+  transition: color 0.2s ease;
+}
+.portfolio .work-back:hover {
+  color: var(--fg);
+}
+.portfolio .work-detail-head {
+  padding: 32px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+.portfolio .work-detail-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 16px 0 24px;
+}
+.portfolio .work-detail-lede {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.35;
+  color: var(--fg-muted);
+  max-width: 60ch;
+  margin: 0;
+  font-style: italic;
+}
+.portfolio .work-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+.portfolio .work-meta dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 8px;
+}
+.portfolio .work-meta dd {
+  font-size: 14px;
+  color: var(--fg);
+  margin: 0;
+}
+.portfolio .work-meta-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.portfolio .work-meta-stack .tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--fg-muted);
+}
+.portfolio .work-links {
+  list-style: none;
+  padding: 24px 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.portfolio .work-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+.portfolio .work-links a:hover {
+  border-color: var(--accent);
+}
+.portfolio .work-body {
+  padding: 64px 0 32px;
+  max-width: 72ch;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--fg);
+}
+.portfolio .work-body p {
+  margin: 0 0 1.2em;
+}
+.portfolio .work-body .work-figure {
+  margin: 48px 0 56px;
+  max-width: none;
+}
+.portfolio .work-body .work-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+}
+.portfolio .work-body .work-figure figcaption {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg-dim);
+}
+
+/* ---------- Singularity Shell architecture diagram ---------- */
+.portfolio .work-body .ss-arch {
+  margin: 56px 0;
+  max-width: none;
+}
+.portfolio .ss-arch-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+}
+.portfolio .ss-arch-svg text {
+  font-family: var(--font-mono);
+}
+.portfolio .ss-arch-eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  fill: var(--fg-dim);
+}
+.portfolio .ss-arch-mono {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  fill: var(--fg-muted);
+}
+.portfolio .ss-arch-mono-dim {
+  fill: var(--fg-dim);
+}
+.portfolio .ss-arch-mono-strong {
+  fill: var(--fg);
+}
+.portfolio .ss-arch-item {
+  font-size: 12px;
+  fill: var(--fg-muted);
+}
+.portfolio .ss-arch-item-active {
+  fill: var(--fg);
+}
+.portfolio .ss-arch-chip {
+  font-size: 10px;
+  font-weight: 600;
+}
+.portfolio .ss-arch-events {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 36px;
+}
+.portfolio .ss-arch-events li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: var(--fg-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.portfolio .ss-arch-evt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--accent-ink);
+  background: var(--accent);
+  padding: 4px 0;
+  text-align: center;
+  border-radius: 999px;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .portfolio .ss-arch-events {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+.portfolio .work-body p:last-child {
+  margin-bottom: 0;
+}
+.portfolio .work-body h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 72px 0 20px;
+}
+.portfolio .work-body h2:first-child {
+  margin-top: 0;
+}
+.portfolio .work-body h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 28px);
+  margin: 56px 0 16px;
+}
+.portfolio .work-body ul {
+  padding-left: 0;
+  margin: 0 0 1.4em;
+  list-style: none;
+}
+.portfolio .work-body ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  color: var(--fg-muted);
+}
+.portfolio .work-body ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 16px;
+  height: 1px;
+  background: var(--border-strong);
+}
+.portfolio .work-body strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+.portfolio .work-body code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 2px 6px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--fg);
+}
+.portfolio .work-body a {
+  color: var(--fg);
+  border-bottom: 1px solid var(--border-strong);
+  transition: border-color 0.2s ease;
+}
+.portfolio .work-body a:hover {
+  border-color: var(--accent);
 }
