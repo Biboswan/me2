@@ -16,7 +16,7 @@ const About: React.FC = () => (
   <section id="about">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/01 — About</span>
+        <span className="section-num">/05 — About</span>
         <h2>
           Words
           <br />

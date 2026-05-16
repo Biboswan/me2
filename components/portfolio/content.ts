@@ -259,7 +259,7 @@ export const content = {
       logo: "/logos/creatella.jpeg",
     },
     {
-      company: "Kenko AI (formerly StudioYou)",
+      company: "Kenko AI",
       role: "Intern — built the webstore from scratch",
       period: "Earlier",
       logo: "/logos/kenkoai.png",

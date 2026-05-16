@@ -27,24 +27,26 @@ const Contact: React.FC = () => (
             architectures, or a slow coffee in whichever city I&apos;m in this
             month.
           </p>
-          <div
-            className="contact-side"
-            style={{ marginTop: 48, maxWidth: 480 }}
-          >
-            {C.socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="hover"
-              >
-                <span>
-                  {s.label.toUpperCase()} · {s.value}
-                </span>
-                <span className="arr">↗</span>
-              </a>
-            ))}
+          <div className="contact-side">
+            {C.socials.map((s) => {
+              const isExternal = s.href.startsWith("http")
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer" : undefined}
+                  data-cursor="hover"
+                >
+                  <span className="contact-side-label">
+                    {s.label.toUpperCase()} · {s.value}
+                  </span>
+                  <span className="contact-side-arr" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+              )
+            })}
           </div>
         </div>
       </Reveal>

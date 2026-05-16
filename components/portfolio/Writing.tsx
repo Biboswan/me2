@@ -64,7 +64,7 @@ const Writing: React.FC = async () => {
     <section id="writing">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="section-num">/05 — Writing</span>
+          <span className="section-num">/06 — Writing</span>
           <h2>
             From the
             <br />

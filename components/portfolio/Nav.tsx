@@ -38,17 +38,20 @@ const Nav: React.FC = () => {
         <span>{C.shortName.toLowerCase()}.roy</span>
       </Link>
       <div className="links">
-        <Link href="/#work" data-cursor="hover">
-          Work
-        </Link>
-        <Link href="/#about" data-cursor="hover">
-          About
-        </Link>
         <Link href="/#experience" data-cursor="hover">
           Experience
         </Link>
         <Link href="/#events" data-cursor="hover">
           Events
+        </Link>
+        <Link href="/#quotes" data-cursor="hover">
+          Kind words
+        </Link>
+        <Link href="/#work" data-cursor="hover">
+          Work
+        </Link>
+        <Link href="/#about" data-cursor="hover">
+          About
         </Link>
         <Link href="/#writing" data-cursor="hover">
           Writing

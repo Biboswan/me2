@@ -27,12 +27,12 @@ const Home: React.FC = () => (
     <Cursor />
     <Nav />
     <Hero />
-    <About />
-    <Work />
     <Experience />
     <Events />
-    <Writing />
     <Quotes />
+    <Work />
+    <About />
+    <Writing />
     <Contact />
     <HireMe />
     <footer className="footer">

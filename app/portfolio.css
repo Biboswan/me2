@@ -254,6 +254,50 @@
   font-size: 11px;
   color: var(--fg-muted);
 }
+.portfolio .hero-top .col-meta-end {
+  align-items: flex-end;
+  text-align: right;
+  justify-self: end;
+}
+.portfolio .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.3s ease,
+    padding 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--accent-ink) 12%, transparent);
+}
+.portfolio .hero-cta:hover {
+  transform: translateY(-2px);
+  padding-right: 30px;
+  box-shadow: 0 12px 26px
+    color-mix(in oklch, var(--accent) 55%, transparent);
+}
+.portfolio .hero-cta-arr {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.portfolio .hero-cta:hover .hero-cta-arr {
+  transform: translateX(6px);
+}
+.portfolio .hero-cta-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+}
 
 .portfolio .hero-name {
   font-size: clamp(56px, 14vw, 220px);
@@ -499,6 +543,9 @@
   border-top: 1px solid var(--border);
   margin-bottom: 80px;
 }
+.portfolio .work-list:has(+ .work-more-wrap) {
+  margin-bottom: 0;
+}
 .portfolio .work-row {
   display: grid;
   grid-template-columns: 60px 1.4fr 1fr 1fr 200px;
@@ -594,6 +641,44 @@
 .portfolio .work-row:hover::before {
   transform: scaleY(1);
   transform-origin: top;
+}
+.portfolio .work-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  padding-top: 24px;
+}
+.portfolio .work-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+.portfolio .work-more:hover {
+  color: var(--fg);
+  border-color: var(--fg);
+  background: var(--bg-soft);
+}
+.portfolio .work-more-arr {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.portfolio .work-more:hover .work-more-arr {
+  transform: translateY(3px);
 }
 
 /* ---------- Tight list (Events / Writing) ---------- */
@@ -818,34 +903,49 @@
   max-width: 36ch;
 }
 .portfolio .contact-side {
+  margin-top: 48px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
 }
 .portfolio .contact-side a {
   display: grid;
   grid-template-columns: 1fr auto;
+  align-items: center;
   gap: 12px;
   padding: 14px 0;
   border-top: 1px solid var(--border);
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: var(--fg-muted);
-  transition: color 0.2s ease;
+  color: var(--fg);
 }
 .portfolio .contact-side a:last-of-type {
   border-bottom: 1px solid var(--border);
 }
-.portfolio .contact-side a:hover {
-  color: var(--fg);
-}
-.portfolio .contact-side a .arr {
+.portfolio .contact-side-label {
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 2px 4px;
+  margin: -2px -4px;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  transition: background-size 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.portfolio .contact-side a:hover .arr {
+.portfolio .contact-side a:hover .contact-side-label {
+  background-size: 100% 100%;
+}
+.portfolio .contact-side-arr {
+  display: inline-block;
+  color: var(--fg-muted);
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 0.2s ease;
+}
+.portfolio .contact-side a:hover .contact-side-arr {
   transform: translate(4px, -4px);
+  color: var(--fg);
 }
 
 /* ---------- Hire me ---------- */
@@ -872,10 +972,11 @@
 }
 .portfolio .hire-slot {
   width: 100%;
+  max-width: 860px;
 }
 .portfolio .hire-cal {
   width: 100%;
-  height: clamp(640px, 78vh, 880px);
+  height: clamp(520px, 62vh, 640px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
@@ -974,8 +1075,14 @@
   .portfolio .section-head,
   .portfolio .about-grid,
   .portfolio .contact,
+  .portfolio .hire,
   .portfolio .exp-row {
     grid-template-columns: 1fr;
+  }
+  .portfolio .hero-top .col-meta-end {
+    align-items: flex-start;
+    text-align: left;
+    justify-self: start;
   }
   .portfolio .list-row {
     grid-template-columns: 60px 1fr 16px;
@@ -1005,9 +1112,6 @@
   }
   .portfolio .work-detail-head {
     padding-top: 100px;
-  }
-  .portfolio .hire {
-    grid-template-columns: 1fr;
   }
 }
 

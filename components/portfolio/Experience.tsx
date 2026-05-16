@@ -7,11 +7,11 @@ const Experience: React.FC = () => (
   <section id="experience">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/03 — Experience</span>
+        <span className="section-num">/01 — Experience</span>
         <h2>
           Where
           <br />
-          <i style={{ color: "var(--fg-muted)" }}>I have built</i>
+          <i style={{ color: "var(--fg-muted)" }}>I have worked</i>
         </h2>
       </Reveal>
       <Reveal className="exp-list">

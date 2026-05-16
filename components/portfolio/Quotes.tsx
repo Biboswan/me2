@@ -7,7 +7,7 @@ const Quotes: React.FC = () => (
   <section id="quotes">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/06 — Kind words</span>
+        <span className="section-num">/03 — Kind words</span>
         <h2>
           People
           <br />

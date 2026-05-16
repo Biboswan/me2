@@ -22,7 +22,6 @@ const HireMe: React.FC = () => {
     const trigger = () => setShouldLoad(true)
     const cleanups: Array<() => void> = []
 
-    // Strategy 1 — proximity: load as the user scrolls near the section.
     const el = slotRef.current
     if (el) {
       const io = new IntersectionObserver(
@@ -38,8 +37,6 @@ const HireMe: React.FC = () => {
       cleanups.push(() => io.disconnect())
     }
 
-    // Strategy 2 — idle defer: after the page finishes loading and the main
-    // thread goes idle, warm up the embed so nav-jumps feel instant.
     let idleHandle: number | undefined
     let timeoutHandle: ReturnType<typeof setTimeout> | undefined
 

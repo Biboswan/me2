@@ -7,7 +7,7 @@ const Events: React.FC = () => (
   <section id="events">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/04 — Events</span>
+        <span className="section-num">/02 — Events</span>
         <h2>
           Talks &
           <br />

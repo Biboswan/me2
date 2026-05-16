@@ -29,14 +29,17 @@ const Hero: React.FC = () => {
             distributed-team friendly, 6 countries last year.
           </p>
         </div>
-        <div
-          style={{
-            alignSelf: "end",
-            justifySelf: "end",
-            textAlign: "right",
-          }}
-        >
+        <div className="col-meta col-meta-end">
           <span className="eyebrow">{C.location}</span>
+          <a href="#hire" className="hero-cta" data-cursor="hover">
+            <span>Hire me</span>
+            <span className="hero-cta-arr" aria-hidden="true">
+              →
+            </span>
+          </a>
+          <span className="hero-cta-sub">
+            15-min intro · usually within 48h
+          </span>
         </div>
       </div>
 
@@ -82,19 +85,6 @@ const Hero: React.FC = () => {
             {String(C.yearsExp).padStart(2, "0")}
             <small>frontend & full-stack-ish</small>
           </span>
-        </div>
-      </div>
-
-      <div className="hero-marquee" aria-hidden="true">
-        <div className="track">
-          {["a", "b"].flatMap((lap) =>
-            C.marquee.map((w) => (
-              <span key={`${lap}-${w}`}>
-                {w}
-                <i className="dot" />
-              </span>
-            ))
-          )}
         </div>
       </div>
     </section>
