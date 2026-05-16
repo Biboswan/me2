@@ -23,24 +23,26 @@ export const metadata = getMetadata({
 })
 
 const Home: React.FC = () => (
-  <div className="portfolio" data-theme="light">
-    <Cursor />
-    <Nav />
-    <Hero />
-    <Experience />
-    <Events />
-    <Quotes />
-    <Work />
-    <About />
-    <Writing />
-    <Contact />
-    <HireMe />
-    <footer className="footer">
-      <span>© Biboswan Roy · 2026</span>
-      <span className="br-mark">BR.</span>
-      <span>Built with intention · not a template</span>
-    </footer>
-  </div>
+  <main>
+    <div className="portfolio" data-theme="light">
+      <Cursor />
+      <Nav />
+      <Hero />
+      <Experience />
+      <Events />
+      <Quotes />
+      <Work />
+      <About />
+      <Writing />
+      <Contact />
+      <HireMe />
+      <footer className="footer">
+        <span>© Biboswan Roy · 2026</span>
+        <span className="br-mark">BR.</span>
+        <span>Built with intention · not a template</span>
+      </footer>
+    </div>
+  </main>
 )
 
 export default Home
