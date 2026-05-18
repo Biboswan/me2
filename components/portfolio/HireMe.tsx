@@ -83,29 +83,29 @@ const HireMe: React.FC = () => {
   return (
     <section id="hire">
       <div className="wrap">
-        <Reveal className="hire">
-          <div>
-            <span className="section-num">/08 — Book a call</span>
+        <Reveal className="contact">
+          <h2 className="contact-headline">
+            Got a project, a role, or a half-baked idea?
+          </h2>
+          <div className="contact-email">
+            <span className="label">EMAIL</span>
+            <span className="sep">·</span>
+            <a href="mailto:bibo@biboswanroy.com" data-cursor="hover">
+              bibo@biboswanroy.com
+            </a>
           </div>
-          <div className="hire-body">
-            <p className="hire-lead">
-              Got a project, a role, or a half-baked idea?
-              <br />
-              <span style={{ color: "var(--fg-muted)", fontStyle: "italic" }}>
-                Grab 15 minutes on my calendar.
-              </span>
-            </p>
-            <div ref={slotRef} className="hire-slot">
-              {shouldLoad ? (
-                <HireMeCal />
-              ) : (
-                <div className="hire-cal hire-cal-skeleton" aria-hidden="true">
-                  <span className="hire-cal-skeleton-label">
-                    Calendar loading…
-                  </span>
-                </div>
-              )}
-            </div>
+        </Reveal>
+        <Reveal className="hire">
+          <div ref={slotRef} className="hire-slot">
+            {shouldLoad ? (
+              <HireMeCal />
+            ) : (
+              <div className="hire-cal hire-cal-skeleton" aria-hidden="true">
+                <span className="hire-cal-skeleton-label">
+                  Calendar loading…
+                </span>
+              </div>
+            )}
           </div>
         </Reveal>
       </div>

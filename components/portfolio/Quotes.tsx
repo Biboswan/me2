@@ -7,12 +7,7 @@ const Quotes: React.FC = () => (
   <section id="quotes">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/03 — Kind words</span>
-        <h2>
-          People
-          <br />
-          <i style={{ color: "var(--fg-muted)" }}>I have worked with</i>
-        </h2>
+        <h2>What people say about me</h2>
       </Reveal>
       <Reveal className="quotes">
         {C.testimonials.map((q) => (

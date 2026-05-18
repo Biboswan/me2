@@ -42,16 +42,13 @@ const Nav: React.FC = () => {
           Experience
         </Link>
         <Link href="/#events" data-cursor="hover">
-          Events
+          Speaking
         </Link>
         <Link href="/#quotes" data-cursor="hover">
-          Kind words
+          Testimonials
         </Link>
         <Link href="/#work" data-cursor="hover">
           Work
-        </Link>
-        <Link href="/#about" data-cursor="hover">
-          About
         </Link>
         <Link href="/#writing" data-cursor="hover">
           Writing

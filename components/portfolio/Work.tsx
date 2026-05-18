@@ -32,10 +32,10 @@ const renderRow = (p: Project) => {
       </span>
       <span className="year">
         {p.year}
-        {p.action && (
-          <span style={{ marginLeft: 10, opacity: 0.6 }}>· {p.action}</span>
-        )}
-        <span className="arrow"> {p.action === "Read" ? "→" : "↗"}</span>
+        {p.action && <span style={{ opacity: 0.7 }}> · {p.action}</span>}
+        <span className="arrow" aria-hidden="true">
+          {p.action === "Read" ? "→" : "↗"}
+        </span>
       </span>
     </>
   )
@@ -73,12 +73,7 @@ const Work: React.FC = () => {
     <section id="work">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="section-num">/04 — Selected work</span>
-          <h2>
-            Recent
-            <br />
-            <i style={{ color: "var(--fg-muted)" }}>shipping</i>
-          </h2>
+          <h2>What I&apos;ve shipped recently</h2>
         </Reveal>
         <Reveal className="work-list">{visible.map(renderRow)}</Reveal>
         {!expanded && hidden > 0 && (

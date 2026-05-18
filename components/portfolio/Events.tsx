@@ -7,12 +7,7 @@ const Events: React.FC = () => (
   <section id="events">
     <div className="wrap">
       <Reveal className="section-head">
-        <span className="section-num">/02 — Events</span>
-        <h2>
-          Talks &
-          <br />
-          <i style={{ color: "var(--fg-muted)" }}>appearances</i>
-        </h2>
+        <h2>Talks &amp; appearances</h2>
       </Reveal>
       <Reveal className="list-tight">
         {C.events.map((e) => (
@@ -25,7 +20,6 @@ const Events: React.FC = () => (
             <span className="list-kind">{e.kind}</span>
             <span className="list-title">{e.title}</span>
             <span className="list-venue">{e.venue}</span>
-            <span className="list-arr">↗</span>
           </div>
         ))}
       </Reveal>

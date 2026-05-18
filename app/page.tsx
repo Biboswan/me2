@@ -1,7 +1,5 @@
 import type * as React from "react"
 
-import About from "@/components/portfolio/About"
-import Contact from "@/components/portfolio/Contact"
 import Cursor from "@/components/portfolio/Cursor"
 import Events from "@/components/portfolio/Events"
 import Experience from "@/components/portfolio/Experience"
@@ -31,14 +29,45 @@ const Home: React.FC = () => (
     <Events />
     <Quotes />
     <Work />
-    <About />
     <Writing />
-    <Contact />
     <HireMe />
     <footer className="footer">
-      <span>© Biboswan Roy · 2026</span>
-      <span className="br-mark">BR.</span>
-      <span>Built with intention · not a template</span>
+      <span className="footer-copy">© Biboswan Roy · 2026</span>
+      <div className="footer-links">
+        <a
+          href="https://twitter.com/Biboswan98"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="hover"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://github.com/Biboswan"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="hover"
+        >
+          Github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/biboswanroy/"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="hover"
+        >
+          Linkedin
+        </a>
+        <a
+          href="https://medium.com/@Biboswan98"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="hover"
+        >
+          Medium
+        </a>
+      </div>
+      <span className="footer-tag">Built with intention · not a template</span>
     </footer>
   </div>
 )

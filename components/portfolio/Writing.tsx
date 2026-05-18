@@ -64,12 +64,7 @@ const Writing: React.FC = async () => {
     <section id="writing">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="section-num">/06 — Writing</span>
-          <h2>
-            From the
-            <br />
-            <i style={{ color: "var(--fg-muted)" }}>notebook</i>
-          </h2>
+          <h2>Writings</h2>
         </Reveal>
         <Reveal className="list-tight">
           {stories.map((s) => (
