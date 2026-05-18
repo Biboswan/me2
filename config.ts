@@ -1,11 +1,11 @@
 const config = {
   baseUrl: "https://nextjs-typescript-saas.vercel.app",
-  appName: "Jitendra Nirnejak",
+  appName: "Biboswan Roy",
   appDescription:
-    "Personal portfolio of Jitendra Nirnejak — software engineer. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
-  creator: "Jitendra Nirnejak",
-  authorName: "Jitendra Nirnejak",
-  authorUrl: "https://github.com/nirnejak",
+    "Personal portfolio of Biboswan Roy — full stack developer with experience in AI, SaaS, and cyber security.",
+  creator: "Biboswan Roy",
+  authorName: "Biboswan Roy",
+  authorUrl: "https://github.com/biboswan",
   keywords: [
     "Next.js",
     "TailwindCSS",

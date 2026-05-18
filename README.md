@@ -1,9 +1,9 @@
 <h1 align="center">
-  Jitendra Nirnejak — Portfolio
+  Biboswan Roy — Portfolio
 </h1>
 
 <p align="center">
-  Personal portfolio site built with Next.js, TypeScript, and Tailwind CSS
+  Personal portfolio of Biboswan Roy — full stack developer (AI, SaaS, cyber security)
 </p>
 
 ---
@@ -85,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [Jitendra Nirnejak](https://github.com/nirnejak)
+Made with ❤️ by [Biboswan Roy](https://github.com/biboswan)

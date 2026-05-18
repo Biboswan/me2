@@ -1,7 +1,7 @@
 {
   "name": "me2",
   "version": "1.0.0",
-  "description": "Personal portfolio of Jitendra Nirnejak — built with Next.js, TypeScript, and Tailwind CSS",
+  "description": "Personal portfolio of Biboswan Roy — full stack developer with experience in AI, SaaS, and cyber security",
   "keywords": [
     "nextjs",
     "oxfmt",
@@ -15,7 +15,7 @@
     "url": "https://github.com/biboswan/me2/issues"
   },
   "license": "MIT",
-  "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
+  "author": "Biboswan Roy <biboswan98@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/biboswan/me2"
