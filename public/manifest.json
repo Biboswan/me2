@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Next.js TypeScript SaaS Starter",
-  "short_name": "Next.js App",
-  "description": "Next.js starter for building SaaS products configured TypeScript, Drizzle, BetterAuth, ESLint, Tailwind, Framer Motion etc.",
+  "name": "Jitendra Nirnejak",
+  "short_name": "Nirnejak",
+  "description": "Personal portfolio of Jitendra Nirnejak — software engineer.",
   "icons": [
     {
       "src": "/path-to-icons/icon-192x192.png",

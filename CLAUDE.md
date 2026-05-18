@@ -11,10 +11,6 @@ bun run lint             # oxlint
 bun run lint:fix         # oxlint with auto-fix
 bun run format           # oxfmt
 bun run type-check       # TypeScript type checking
-bun run db:generate      # Generate Drizzle migrations from schema
-bun run db:migrate       # Run pending migrations
-bun run db:push          # Push schema to DB (dev only)
-bun run db:studio        # Drizzle Studio UI
 ```
 
 Run `bun run lint`, `bun run type-check`, and `bun run build` before completing work.
@@ -23,18 +19,14 @@ Run `bun run lint`, `bun run type-check`, and `bun run build` before completing 
 
 **Next.js 16 App Router** with React 19 and React Compiler enabled. Server components by default; use `"use client"` directive only when needed.
 
-- `app/` — Pages, layouts, API routes, and `main.css` (Tailwind v4 global styles + custom animations)
+- `app/` — Pages, layouts, and `main.css` (Tailwind v4 global styles + custom animations)
 - `components/atoms/` — Atomic UI components using CVA (class-variance-authority) for variants
+- `components/portfolio/` — Portfolio sections (Hero, About, Experience, Work, Writing, etc.)
 - `hooks/` — Custom React hooks (useModal, useClickOutside, useDynamicHeight, useTheme)
-- `utils/` — Auth setup, metadata generation, schema.org, classNames helper, animation presets
-- `db/` — Drizzle ORM schema and migrations (Neon PostgreSQL via `@neondatabase/serverless`)
+- `utils/` — Metadata generation, schema.org, classNames helper, animation presets
 - `config.ts` — Site-wide SEO/metadata configuration
 
-**Auth**: Better Auth with OAuth providers (Google, Apple, Twitter). Server instance in `utils/auth.ts`, client in `utils/auth-client.ts`. Auth API handled by catch-all route at `app/api/auth/[...all]/route.ts`.
-
-**Database**: Drizzle ORM with Neon serverless PostgreSQL. Schema in `db/schema.ts` (user, session, account, verification, waitlist tables). Config in `drizzle.config.ts`.
-
-**Content**: MDX support via `@next/mdx`. Custom components in `mdx-components.tsx` with Shiki syntax highlighting. Blog posts as `.mdx` files under `app/blog/`.
+**Content**: MDX support via `@next/mdx`. Custom components in `mdx-components.tsx` with Shiki syntax highlighting. Blog posts as `.mdx` files under `blogs/`, project case studies under `projects/`.
 
 ## Code Style
 
@@ -44,7 +36,7 @@ oxlint handles linting and oxfmt handles formatting (no ESLint/Prettier/Biome). 
 - Tailwind classes sorted automatically by oxfmt (`sortTailwindcss` — recognizes `className`, `classNames(...)`, `cva(...)`, `cx(...)`, `clsx(...)`, `twMerge(...)`)
 - Pre-commit hook runs `oxlint --fix` and `oxfmt` via lint-staged
 
-See `AGENTS.md` for detailed component patterns, import conventions, naming rules, and database patterns.
+See `AGENTS.md` for detailed component patterns, import conventions, and naming rules.
 
 ## Key Conventions
 

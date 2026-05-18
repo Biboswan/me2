@@ -1,11 +1,11 @@
 const config = {
   baseUrl: "https://nextjs-typescript-saas.vercel.app",
-  appName: "Next.js TypeScript SaaS Starter",
+  appName: "Jitendra Nirnejak",
   appDescription:
-    "Next.js starter for building SaaS products configured with TypeScript, Drizzle, BetterAuth, oxlint, oxfmt, Tailwind, Framer Motion etc.",
-  creator: "<Creator Name>",
-  authorName: "<Author Name>",
-  authorUrl: "<Author Name or Email>",
+    "Personal portfolio of Jitendra Nirnejak — software engineer. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+  creator: "Jitendra Nirnejak",
+  authorName: "Jitendra Nirnejak",
+  authorUrl: "https://github.com/nirnejak",
   keywords: [
     "Next.js",
     "TailwindCSS",
@@ -15,7 +15,6 @@ const config = {
     "oxlint",
     "oxfmt",
     "JavaScript",
-    "Postgres",
   ],
   twitterSite: "@site",
   twitterCreator: "@creator",

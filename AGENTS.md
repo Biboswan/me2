@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guidelines and commands for agentic coding agents working in this Next.js TypeScript SaaS repository.
+Guidelines and commands for agentic coding agents working in this Next.js TypeScript personal portfolio repository.
 
 ## Development Commands
 
@@ -14,13 +14,6 @@ Guidelines and commands for agentic coding agents working in this Next.js TypeSc
 - `bun run format` - Format with oxfmt
 - `bun run format:check` - Check if files are formatted correctly
 - `bun run type-check` - Run TypeScript type checking
-
-### Database Commands (Drizzle ORM)
-
-- `bun run db:generate` - Generate migrations from schema changes
-- `bun run db:migrate` - Run pending migrations
-- `bun run db:push` - Push schema changes directly to database (development only)
-- `bun run db:studio` - Open Drizzle Studio for database management
 
 ### Testing Commands
 
@@ -42,18 +35,18 @@ Once configured, use:
 ### File Structure
 
 ```
-app/                    # Next.js App Router (pages, API routes, layouts)
-├── admin/              # Admin pages
-├── api/                # API routes (auth, schema, waitlist)
-├── auth/               # Authentication pages
-├── blog/               # Blog/MDX content (.mdx files)
+app/                    # Next.js App Router (pages, layouts)
+├── blog/               # Blog routes
+├── work/               # Work / project case-study routes
 ├── main.css            # Global CSS with Tailwind v4 and custom animations
 └── layout.tsx          # Root layout with font loading and theme setup
-components/             # React components (organized by atomic design)
+components/             # React components
 ├── atoms/              # Atomic UI components using CVA for variants
-db/                     # Drizzle ORM schema and migrations (Neon PostgreSQL)
+└── portfolio/          # Portfolio sections (Hero, About, Experience, Work, etc.)
 hooks/                  # Custom React hooks (useModal, useClickOutside, useDynamicHeight, useTheme)
-utils/                  # Auth setup, metadata generation, schema.org, classNames helper, animation presets
+utils/                  # Metadata generation, schema.org, classNames helper, animation presets
+blogs/                  # Blog content (.mdx)
+projects/               # Project case-study content (.mdx)
 @types/                 # TypeScript type definitions
 config.ts               # Site-wide SEO/metadata configuration
 public/                 # Static assets
@@ -105,7 +98,6 @@ export default Button
 - **Constants**: UPPER_SNAKE_CASE (`BASE_URL`)
 - **Types**: PascalCase (`Props`, `ApiResponse<T>`)
 - **Files**: PascalCase for components, camelCase for utilities
-- **Database**: snake_case for table/column names
 
 ### TypeScript Guidelines
 
@@ -115,43 +107,11 @@ export default Button
 - Use path mapping with `@/*` for absolute imports
 - Include return type annotations for hook functions
 
-### Database Patterns
-
-```typescript
-export const user = pgTable("user", {
-  id: text("id").primaryKey(),
-  email: text("email").notNull().unique(),
-  updatedAt: timestamp("updated_at")
-    .$onUpdate(() => new Date())
-    .notNull(),
-})
-```
-
-- Schema-first with Drizzle ORM and Neon serverless PostgreSQL (`@neondatabase/serverless`)
-- Schema in `db/schema.ts` (user, session, account, verification, waitlist tables)
-- Config in `drizzle.config.ts`
-- Use foreign keys with cascade delete
-- Implement `$onUpdate` for automatic timestamps
-
 ### Error Handling
 
-```typescript
-export async function POST(request: Request) {
-  try {
-    return NextResponse.json({ message: "Success!" }, { status: 200 })
-  } catch (error) {
-    console.error("Error processing request:", error)
-    return NextResponse.json(
-      { error: "Failed to process request" },
-      { status: 400 }
-    )
-  }
-}
-```
-
-- API routes: Try-catch with `NextResponse.json()`
 - Use `console.error` for logging, never expose sensitive data
-- Use proper HTTP status codes (200, 400, 500)
+- Surface user-facing errors via Sonner toasts where appropriate
+- Fail gracefully — render fallback UI rather than crashing the page
 
 ### Formatting Rules
 
@@ -180,16 +140,12 @@ Always run before completing work:
 
 ## Architecture Details
 
-**Auth**: Better Auth with OAuth providers (Google, Apple, Twitter). Server instance in `utils/auth.ts`, client in `utils/auth-client.ts`. Auth API handled by catch-all route at `app/api/auth/[...all]/route.ts`.
-
-**Content**: MDX support via `@next/mdx`. Custom components in `mdx-components.tsx` with Shiki syntax highlighting. Blog posts as `.mdx` files under `app/blog/`.
+**Content**: MDX support via `@next/mdx`. Custom components in `mdx-components.tsx` with Shiki syntax highlighting. Blog posts as `.mdx` files under `blogs/`, project case studies under `projects/`.
 
 ## Project Features
 
 - Next.js 16 with App Router, React 19, React Compiler
 - MDX support with Shiki syntax highlighting, View Transitions
-- Better Auth with OAuth providers (Google, Apple, Twitter)
-- Drizzle ORM with Neon serverless PostgreSQL
 - Tailwind CSS v4 with custom animations
 - Framer Motion (`motion` package) for animations
 - oxlint for linting and oxfmt for formatting (no ESLint/Prettier/Biome)
